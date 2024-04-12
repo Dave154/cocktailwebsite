@@ -13,7 +13,7 @@ const Nav =()=>{
  }
 	return<nav className='nav'>
 
-		<a href="#" className='logo'>Cocktails </a>
+		<a href="/" className='logo'>Cocktails </a>
 		<NavLink to='/'>
 		<form action="" className={`${search && 'search_sm_screen'} searchform`} onSubmit={handleSubmit}>
 			
