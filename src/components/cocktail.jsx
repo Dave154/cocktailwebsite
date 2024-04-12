@@ -1,14 +1,16 @@
 import{Link} from 'react-router-dom'
-const Cocktail =({strDrink,strDrinkThumb,idDrink})=>{
-	return <Link to={`./cocktail/${idDrink}`}>
+const Cocktail =(item)=>{
+	const {strDrink:name,strDrinkThumb:image,idDrink:id,strGlass:glass,strAlcoholic:tag}=item
+	return <Link to={`./cocktail/${id}`}>
 		
-	<div className="cocktail">
-		<span className='image_container'>	<img className='image' src={strDrinkThumb} alt={strDrink} loading=lazy/></span>
-		<div className='cocktail_deets'>
-			
-		<h3>{strDrink}</h3>
+	<article className="cocktail">
+		<span className='image_container'>	<img className='image' src={image} alt={name} loading='lazy'/></span>
+		<div className='cocktail_deets'>	
+		<h3>{name}</h3>
+		<h4 className="glass">{glass}</h4>
+		<span className='tag'>{tag}</span>
 		</div>
-	</div>
+	</article>
 	</Link>
 }
 export default Cocktail

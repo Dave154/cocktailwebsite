@@ -42,7 +42,8 @@ const AppProvider =({children})=>{
 		dispatch({type:'LOADING'})
 		const response = await fetch(`${url}${state.value}`)
 		const data = await response.json()
-			dispatch({type:'DISPLAY', payload:data.drinks})
+		const {drinks} = data
+		dispatch({type:'DISPLAY', payload:drinks})
 			console.log(data)
 		}catch(err){
 			dispatch({type:'ERROR'})
