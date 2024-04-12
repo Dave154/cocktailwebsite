@@ -18,6 +18,7 @@ const Hero =()=>{
 		</section>	
 	}
 	return <section className="hero">
+			<h2>Cocktails</h2>
         <ul className="list">	
         	{cocktailList.map(item=>{
         		return <Cocktail {...item} key= {item.idDrink}/>
