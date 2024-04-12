@@ -28,7 +28,7 @@ const CocktailPage =()=>{
       strIngredient4,
       strIngredient5,]
 	return <div className="cocktailpage">
-	 <Link to='/'>Back</Link>
+	 <Link to='/'><button className="back_arrow"><FaArrowLeft/></button></Link>
 	 <h2>{name}</h2>
 	 <div className="drink">
 		<span >

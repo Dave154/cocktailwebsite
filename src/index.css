@@ -21,6 +21,11 @@ ul{
   list-style: none;
 }
 
+button{
+  outline: 0;
+  border: 0;
+  background: none;
+}
 
 
 .nav{
@@ -149,9 +154,17 @@ background: transparent;
    padding: 5px;
 }
 .cocktailpage{
+  position: relative;
   width: 100vw;
   display: grid;
   place-items: center;
+  margin-top: 5rem;
+
+}
+.back_arrow{
+  position: absolute;
+  left: 10px;
+
 }
 .co_image{
   width: 100%;
