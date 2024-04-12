@@ -3,7 +3,7 @@ const Cocktail =({strDrink,strDrinkThumb,idDrink})=>{
 	return <Link to={`./cocktail/${idDrink}`}>
 		
 	<div className="cocktail">
-		<span className='image_container'>	<img className='image' src={strDrinkThumb} alt={strDrink}/></span>
+		<span className='image_container'>	<img className='image' src={strDrinkThumb} alt={strDrink} loading=lazy/></span>
 		<div className='cocktail_deets'>
 			
 		<h3>{strDrink}</h3>
