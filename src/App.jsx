@@ -1,22 +1,20 @@
 import { useState } from 'react'
-import {useGlobalContext} from './components/context.jsx'
+import {useGlobalContext} from './context.jsx'
+import {createBrowserRouter,Routes,Route} from 'react-router-dom'
+
 import Nav from './components/nav.jsx'
-import Hero from './components/hero.jsx'
+import Profile from './components/profile.jsx'
 import About from './components/about.jsx'
-import CocktailPage from './components/cocktailpage.jsx'
-import Error from './components/error.jsx'
-import {Routes,Route} from 'react-router-dom'
+import Preview from './components/preview.jsx'
+import Reviews from './components/reviews.jsx'
 function App() {
- const data = useGlobalContext()
   return (
     <main>
-      <Nav/>
-      <Routes>  
-        <Route path='/' element={<Hero/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/cocktail/:id' element={<CocktailPage/>}/>
-        <Route path='*' element={<Error/>}/>
-      </Routes> 
+     <Nav/>
+     <Profile/>
+     <About/>
+     <Preview/>
+     <Reviews/>
     </main>
   )
 }
